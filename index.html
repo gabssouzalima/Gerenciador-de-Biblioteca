@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sistema de Biblioteca</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-900 min-h-screen">
+
+  <main class="max-w-7xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+    <!-- FORMULÁRIOS / OPERAÇÕES -->
+    <section class="bg-white p-6 rounded-lg shadow-sm space-y-6">
+
+      <h1 class="text-2xl font-semibold text-gray-800">
+        Sistema de Biblioteca
+      </h1>
+
+      <!-- Cadastro de Livro -->
+      <div class="space-y-3">
+        <h2 class="text-lg font-medium">Cadastrar Livro</h2>
+
+        <input
+          type="text"
+          id="tituloLivro"
+          placeholder="Título do livro"
+          class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+
+        <input
+          type="text"
+          id="autorLivro"
+          placeholder="Autor do livro"
+          class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+
+        <button
+          id="btnCadastrarLivro"
+          class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition"
+        >
+          Cadastrar Livro
+        </button>
+      </div>
+
+      <hr class="border-gray-200" />
+
+      <!-- Cadastro de Usuário -->
+      <div class="space-y-3">
+        <h2 class="text-lg font-medium">Cadastrar Usuário</h2>
+
+        <input
+          type="text"
+          id="nomeUsuario"
+          placeholder="Nome do usuário"
+          class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+
+        <button
+          id="btnCadastrarUsuario"
+          class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition"
+        >
+          Cadastrar Usuário
+        </button>
+      </div>
+
+      <hr class="border-gray-200" />
+
+      <!-- Operações -->
+      <div class="space-y-3">
+        <h2 class="text-lg font-medium">Operações</h2>
+
+        <select
+          id="selectUsuario"
+          class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          <option value="">Selecione o usuário</option>
+        </select>
+
+        <select
+          id="selectLivro"
+          class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          <option value="">Selecione o livro</option>
+        </select>
+
+        <div class="grid grid-cols-2 gap-3">
+          <button
+            id="btnEmprestar"
+            class="bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition"
+          >
+            Emprestar
+          </button>
+
+          <button
+            id="btnDevolver"
+            class="bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition"
+          >
+            Devolver
+          </button>
+        </div>
+      </div>
+
+      <p id="mensagem" class="text-sm text-gray-600"></p>
+
+    </section>
+
+    <!-- TABELA -->
+    <section class="bg-white p-6 rounded-lg shadow-sm">
+
+      <h2 class="text-lg font-medium mb-4">Livros Cadastrados</h2>
+
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse text-sm">
+          <thead>
+            <tr class="bg-gray-50 text-left">
+              <th class="p-3 border">Título</th>
+              <th class="p-3 border">Autor</th>
+              <th class="p-3 border">Status</th>
+              <th class="p-3 border">Usuário</th>
+            </tr>
+          </thead>
+
+          <tbody id="tabelaLivros">
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- JavaScript -->
+  <script type="module" src="/app.js"></script>
+
+</body>
+</html>

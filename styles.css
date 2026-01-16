@@ -1,0 +1,148 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout geral */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f4f6f9, #e9edf3);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container principal */
+main {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 520px;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #1f2933;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #374151;
+}
+
+/* Campos de formulário */
+input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border 0.2s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* Botões */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Separador */
+hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 24px 0;
+}
+
+/* Mensagens */
+#mensagem {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 14px;
+    color: #065f46;
+    font-weight: 500;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 32px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.form-section {
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 10px;
+}
+
+.table-section {
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+th {
+    background-color: #f1f5f9;
+    font-weight: 600;
+}
+button#btnEmprestar {
+    background-color: #2563eb;
+}
+
+button#btnDevolver {
+    background-color: #16a34a;
+}
+
+button#btnDevolver:hover {
+    background-color: #15803d;
+}
+
+
+/* Responsivo */
+@media (max-width: 600px) {
+    main {
+        padding: 24px;
+    }
+}
